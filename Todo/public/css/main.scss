@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+$primaryColor:#0078D7;
+$textColor:#434343;
+$hoverBackground:#E7F1FD;
+body{
+    overflow-x: hidden;
+    background-color: #F0F2F5;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    color:$textColor;
+}
+a{
+    text-decoration: none;
+}
+.center-div{
+    margin-left:auto;
+    margin-right: auto;
+}
+.sign-in-button{
+    color: white;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    background-color: $primaryColor;
+    margin-top: 30px;
+    &:hover{
+        opacity: .9;
+    }
+}
+.grid{
+    display: grid;
+    width: 100%;
+    max-width: 1300px;
+    margin: 30px auto 0px auto;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 50px;
+    .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 150px;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+        }
+        .p-subtitle{
+            width: 80%;
+            margin: 20px 0px;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            opacity: .8;
+        }
+        span{
+            font-weight: 300;
+            font-size: 13px;
+            margin-top: 10px;
+            a{
+                color:$primaryColor;
+                font-weight: bold;
+            }
+        }
+        strong{
+            margin-top: 50px;
+        }
+        .store-icons{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            border: 1px solid lightgrey;
+            padding: 20px;
+            p{
+                font-size: 13px;
+            }
+            i{
+                font-size: 20px;
+                padding-left: 10px;
+            }
+            &:hover{
+                background-color: #D3D3D3;
+                cursor: none;
+            }
+        }
+    }
+    .right{
+        position: relative;
+        background-image: url('/img/Web\ 1920\ –\ 12.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px 4px 8px #E4E4E4;
+        border-radius: 20px;
+        img{
+            max-height: 350px;
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            border-radius:20px;
+            box-shadow: 0px 8px 16px #E4E4E4;
+        }
+    }
+}
+
+.login, .register{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100px;
+    max-width:700px;
+    display: grid;
+    grid-template-columns: auto 300px;
+    box-shadow: 0px 0px 10px rgb(196, 194, 194);
+    .login-form{
+        padding:40px;
+    }
+    .cover{
+        background-color: $primaryColor;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        h1{
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+        }
+        .circle{
+            border-radius: 50%;
+            position: absolute;
+        }
+        .circle-small{
+            height: 80px;
+            width: 80px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #035EA6;
+        }
+        .circle-medium{
+            height: 130px;
+            width: 130px;
+            bottom: 50px;
+            left: 50px;
+            background-color: #2180CB;
+        }
+        .circle-large{
+            height: 200px;
+            width: 200px;
+            bottom: 100px;
+            right: -30px;
+            background-color: #318FDA;
+        }
+    }
+    .error{
+        font-size: 13px;
+        padding:5px;
+        background-color: #D34F51;
+        strong{
+            color: white;
+        }
+    }
+}
+.register{
+    grid-template-columns: 300px auto;
+    .register-form{
+        padding:40px;
+    }
+    .cover{
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+}
+
+
+//FORM DESIGN
+.form-ui{
+    .form-ui{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form-group{
+        margin-top: 20px;
+    }
+    .form-group-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+    }
+    .form-group-label{
+        font-size: 15px;
+    }
+    .form-group-input{
+        width: 100%;
+        padding:10px;
+        background-color: #F5F5F5;
+        border: none;
+        font-weight: 300;
+        margin-top: 5px;
+        &:focus{
+            outline:2px solid #0178D7;
+            border-radius: 5px;
+        }
+    }
+    .form-group-submit{
+        background-color: $primaryColor;
+        color: white;
+        width: 100%;
+        padding:10px;
+        border: none;
+    }
+    .form-group span{
+        font-size: 13px;
+        font-weight: 300;
+        float: right;
+        margin-top: 5px;
+        a{
+            font-weight: bold;
+            color: $primaryColor;
+        }
+    }
+}
+
+//FORM DESIGN END
+
+
+
+
+//HOME
+.header{
+    margin-top: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    h3{
+        color: white;   
+        font-size: 25px;
+        text-align: center;
+    }
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+    }
+}
+.left-navigation{
+    // display: none;
+    width: 250px;
+    min-height: 100vh;
+    background-color: white;
+    padding-top: 10px;
+    position: fixed;
+    .active-nav{
+        background-color: $hoverBackground;
+        color: $primaryColor;
+        border-left: 5px solid $primaryColor;
+        span{
+            color: $primaryColor;
+        }
+        strong{
+            color: $primaryColor;
+        }
+    }
+    ul{
+        width: 250px;
+        li{
+            transition: all .2s;
+            font-size: 15px;
+            font-weight: 400;
+            height: 40px;
+            line-height: 40px;
+            border-left: 5px solid white;
+            &:hover{
+                background-color: $hoverBackground;
+                color: $primaryColor;
+                border-left: 5px solid $primaryColor;
+                span{
+                    color: $primaryColor;
+                }
+                strong{
+                    color: $primaryColor;
+                }
+            }
+            span{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            strong{
+                float: right;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.content{
+    width: calc(100%-250px);
+    margin-left: 250px;
+    margin-top: 60px;
+    height: 100px;
+    .center-div{
+        max-width: 1300px;
+        padding:10px 20px;
+        height: auto;
+
+        .todo-list{
+            margin-top:20px;
+            width: 100%;
+            height: auto;
+            display: grid;grid-gap:10px;
+            .todo{
+                background-color: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px lightgray;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 15px;
+                .todo-left,.todo-right{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    span{
+                        font-weight: bold;
+                    }
+                    p{
+                        padding-left: 20px;
+                    }
+                    a{
+                        height: 40px;
+                        width:40px;
+                        line-height: 40px;
+                        text-align: center;
+                        margin-left: 5px;
+                        border-radius: 50%;
+                        border:0px;
+                        color: #434343;
+                        background-color: transparent;
+                        &:hover{
+                            background-color: $hoverBackground;
+                            color:$primaryColor;
+                        }
+                    }
+                    .btn-delete{
+                        height: 40px;
+                        width:40px;
+                        line-height: 40px;
+                        text-align: center;
+                        margin-left: 5px;
+                        border-radius: 50%;
+                        border:0px;
+                        background-color: transparent;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $hoverBackground;
+                            span{
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                    .btn{
+                        height: 40px;
+                        width:40px;
+                        line-height: 40px;
+                        text-align: center;
+                        margin-left: 5px;
+                        border-radius: 50%;
+                        border:0px;
+                        background-color:transparent;
+                        border: 0px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $hoverBackground;
+                            span{
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+                .todo-right {
+                    p{
+                        font-size:15px;
+                        span{
+                            height: 30px;
+                            width:30px;
+                            background-color: springgreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .row-left span{
+        font-size: 13px;
+    }
+    .row-right 
+        span{
+            font-weight: 400;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: $hoverBackground;
+            }
+        }
+}
+
+.add-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 0px 4px lightgrey;
+    span{
+        line-height: 50px;
+        color: white;
+    }
+    &:hover{
+        background-color: $hoverBackground;
+        span{
+            color: $textColor;
+        }
+    }
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px lightgray;
+    .card-header{
+        display: flex;
+        height: 70px;
+        border-bottom: 1px solid #DFDFDF;
+        padding-left: 50px;
+        padding-right: 50px;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow:0px 3px 5px #DDDDDD;
+            span{
+                line-height: 50px;
+            }
+            &:hover{
+                background-color: $hoverBackground;
+            }
+        }
+    }
+    .card-body{
+        padding: 50px;
+        h1{
+            text-align: center;
+            margin-top: -20px;
+        }
+        .body-row{
+            width: 100%;
+            display: flex;
+            padding-top: 20px;
+            justify-content: space-between;
+            justify-items: center;
+            span{
+                padding:5px;
+                border-radius: 5px;
+            }
+            :nth-child(2){
+                background-color: $hoverBackground;
+            }
+        }
+    }
+}
+.btn{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    &:hover{
+        color: white;
+        opacity: .8;
+    }
+}
+.btn-primary{
+    color: black;
+    background-color:rgb(223, 223, 223);
+}
+.btn-blue{
+    color: white;
+    background-color: $primaryColor
+}
+.btn-delete{
+    color: white;
+    background-color: rgb(224, 38, 38);
+    border: 0px;
+}
