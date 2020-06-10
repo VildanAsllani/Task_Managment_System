@@ -37,8 +37,8 @@
                 </div>
             </div>
         </aside>
-        <aside class="right">
-            <img src="./img/iphone.jpg">
+    <aside class="right" style="background-image: url('{{asset('images/Web.png')}}')">
+            <img src="{{asset('images/Mobile.png')}}">
         </aside>
     </div>
 </body>
